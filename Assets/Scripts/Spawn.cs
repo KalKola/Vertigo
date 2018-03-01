@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public LevelManager levelManager;
+
+    // Use this for initialization
+    void Start()
+    {
+        levelManager = FindObjectOfType<LevelManager>();
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.name == "Player")
+        {
+            levelManager.currentSpawn = gameObject;
+        }
+    }
 }
