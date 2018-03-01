@@ -6,7 +6,7 @@ TextureImporter:
   fileIDToRecycleName:
     21300000: Player
     21300002: Floor
-    21300004: deathPlatform
+    21300004: Death Platform
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -121,7 +121,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: deathPlatform
+      name: Death Platform
       rect:
         serializedVersion: 2
         x: 16

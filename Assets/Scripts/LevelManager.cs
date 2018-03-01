@@ -18,7 +18,7 @@ public class LevelManager : MonoBehaviour {
 		
 	}
 
-    public void RespawnPlayer()
+    public void SpawnPlayer()
     {
         Debug.Log("Player Respawn");
         player.transform.position = currentSpawn.transform.position;

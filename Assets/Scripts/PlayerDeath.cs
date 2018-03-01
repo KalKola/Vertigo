@@ -6,8 +6,8 @@ public class PlayerDeath : MonoBehaviour {
 
     public LevelManager levelManager;
 
-    // Use this for initialization
-    void Start () {
+	// Use this for initialization
+	void Start () {
         levelManager = FindObjectOfType<LevelManager>();
 	}
 	
@@ -18,9 +18,9 @@ public class PlayerDeath : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.name == "Player")
+        if(other.name == "Player")
         {
-            levelManager.RespawnPlayer();
+            levelManager.SpawnPlayer();
         }
     }
 }
