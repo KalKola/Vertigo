@@ -877,9 +877,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sourceOrientation: {x: 0, y: 0, z: 0, w: 0}
+  rotation: {x: 0, y: 0, z: 0, w: 0}
+  leftright: 0
   rotate: 0
-  rotation: 0
   direction: 0
+  speed: 0
+  angle: 0
 --- !u!4 &287651346
 Transform:
   m_ObjectHideFlags: 0
