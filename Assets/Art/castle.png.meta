@@ -18,6 +18,11 @@ TextureImporter:
     21300022: MainWallRight
     21300024: Water
     21300026: WaterEnd
+    21300028: Bridge1
+    21300030: EndLeft
+    21300032: EndRight
+    21300034: BelowStairsLeft
+    21300036: BelowStairRight
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -178,9 +183,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 94
-        y: 277
+        y: 256
         width: 34
-        height: 48
+        height: 69
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,9 +197,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 277
+        y: 256
         width: 34
-        height: 48
+        height: 69
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,7 +226,7 @@ TextureImporter:
         serializedVersion: 2
         x: 64
         y: 257
-        width: 32
+        width: 30
         height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -249,7 +254,7 @@ TextureImporter:
         serializedVersion: 2
         x: 64
         y: 224
-        width: 32
+        width: 30
         height: 33
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -280,7 +285,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -294,7 +299,49 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bridge1
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 244
+        width: 96
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EndLeft
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 224
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EndRight
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 224
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
