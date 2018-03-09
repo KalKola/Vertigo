@@ -9,7 +9,6 @@ public class Rotate : MonoBehaviour {
 	public Quaternion rotation;
     public bool leftright;
     public bool rotate;
-    public int direction;
     public float speed;
     public float angle;
 
@@ -21,7 +20,6 @@ public class Rotate : MonoBehaviour {
 
         //defining variables
         rotate = false;
-        direction = 0;
         speed = 0.025f;
         angle = 0.0f;
         sourceOrientation = transform.rotation;
@@ -32,17 +30,15 @@ public class Rotate : MonoBehaviour {
         if (Input.GetKeyDown("left"))
         { 
             rotate = true;
-            direction = 1;
             angle += 90;
         }
 
         if (Input.GetKeyDown("right"))
         {
             rotate = true;
-            direction = -1;
-            angle += 90;
+            angle -= 90;
         }
-        rotation = Quaternion.Euler(0, 0, angle * direction);
+        rotation = Quaternion.Euler(0, 0, angle);
         if (rotate == true)
 		{
     
