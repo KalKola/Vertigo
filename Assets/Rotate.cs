@@ -22,7 +22,7 @@ public class Rotate : MonoBehaviour {
         //defining variables
         rotate = false;
         direction = 0;
-        speed = 0.025f;
+        speed = 0.1f;
         angle = 0.0f;
         sourceOrientation = transform.rotation;
     }
@@ -32,17 +32,17 @@ public class Rotate : MonoBehaviour {
         if (Input.GetKeyDown("left"))
         { 
             rotate = true;
-            direction = 1;
+            //direction = 1;
             angle += 90;
         }
 
         if (Input.GetKeyDown("right"))
         {
             rotate = true;
-            direction = -1;
-            angle += 90;
+            //direction = -1;
+            angle -= 90;
         }
-        rotation = Quaternion.Euler(0, 0, angle * direction);
+        rotation = Quaternion.Euler(0, 0, angle);
         if (rotate == true)
 		{
     
