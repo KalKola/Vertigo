@@ -12,11 +12,13 @@ public class PlayerController : MonoBehaviour {
     public LayerMask whatIsGround;
     private bool grounded;
     private bool doubleJump;
+    Rotate rotate;
 
 	// Use this for initialization
 	void Start ()
     {
-		
+        rotate = GameObject.FindObjectOfType<Rotate>();
+        rotate.rotate = false;
 	}
 
     private void FixedUpdate()
@@ -27,27 +29,32 @@ public class PlayerController : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
-        if(grounded)
+        if(rotate.rotate == false)
         {
-            doubleJump = false;
+            if (grounded)
+            {
+                doubleJump = false;
+            }
+            if (Input.GetKeyDown(KeyCode.Space) && grounded)
+            {
+                GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpHeight);
+            }
+            if (Input.GetKeyDown(KeyCode.Space) && !doubleJump && !grounded)
+            {
+                GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpHeight);
+                doubleJump = true;
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                GetComponent<Rigidbody2D>().velocity = new Vector2(moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+            }
+
         }
-        if (Input.GetKeyDown(KeyCode.Space) && grounded)
-        {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpHeight);
-        }
-        if (Input.GetKeyDown(KeyCode.Space) && !doubleJump && !grounded)
-        {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpHeight);
-            doubleJump = true; 
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
-        }
+
 
     }
 }

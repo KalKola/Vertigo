@@ -3,14 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Rotate : MonoBehaviour {
-    
+
     //initializing variables
-	public Quaternion sourceOrientation;
+    public GameObject target;
+    public Quaternion playerOrientation;
+    public Quaternion sourceOrientation;
 	public Quaternion rotation;
+    public Quaternion playerRotation;
     public bool leftright;
+    public int playerDirection;
     public bool rotate;
     public float speed;
+    public float playerSpeed;
     public float angle;
+    public Rigidbody2D player_rb;
 
 
 
@@ -20,37 +26,51 @@ public class Rotate : MonoBehaviour {
 
         //defining variables
         rotate = false;
+        playerDirection = 0;
         speed = 0.025f;
         angle = 0.0f;
         sourceOrientation = transform.rotation;
+        playerRotation = target.transform.rotation;
+        player_rb = target.GetComponent<Rigidbody2D>();
     }
 
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown("left"))
-        { 
-            rotate = true;
-            angle += 90;
-        }
 
-        if (Input.GetKeyDown("right"))
-        {
-            rotate = true;
-            angle -= 90;
-        }
-        rotation = Quaternion.Euler(0, 0, angle);
+
+
         if (rotate == true)
 		{
-    
+            rotation = Quaternion.Euler(0, 0, angle);
             if (sourceOrientation != rotation)
             {
-                transform.rotation = Quaternion.Slerp(sourceOrientation, rotation, speed);
+                transform.rotation = Quaternion.Lerp(sourceOrientation, rotation, speed);
+                target.transform.rotation = Quaternion.Lerp(playerRotation, playerRotation, playerSpeed);
                 sourceOrientation = transform.rotation;
+                player_rb.isKinematic = true;
+
             }
 
             else
             {
                 rotate = false;
+                player_rb.isKinematic = false;
+            }
+        }
+        else
+        {
+            if (Input.GetKeyDown("left"))
+            {
+                rotate = true;
+                playerDirection = -1;
+                angle += 90;
+            }
+
+            if (Input.GetKeyDown("right"))
+            {
+                rotate = true;
+                playerDirection = 1;
+                angle -= 90;
             }
         }
 	}
