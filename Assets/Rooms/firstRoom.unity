@@ -260,7 +260,7 @@ MonoBehaviour:
   speed: 0
   playerSpeed: 0
   angle: 0
-  player_rb: {fileID: 0}
+  player_rb: {fileID: 1526665353}
 --- !u!4 &287651346
 Transform:
   m_ObjectHideFlags: 0

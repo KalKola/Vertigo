@@ -27,17 +27,29 @@ public class Rotate : MonoBehaviour {
         //defining variables
         rotate = false;
         playerDirection = 0;
-        speed = 0.025f;
+        speed = 0.5f;
         angle = 0.0f;
         sourceOrientation = transform.rotation;
         playerRotation = target.transform.rotation;
-        player_rb = target.GetComponent<Rigidbody2D>();
+        //player_rb = target.GetComponent<Rigidbody2D>();
     }
 
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
+        if (Input.GetKeyDown("left"))
+        {
+            rotate = true;
+            playerDirection = -1;
+            angle += 90;
+        }
 
-
+        if (Input.GetKeyDown("right"))
+        {
+            rotate = true;
+            playerDirection = 1;
+            angle -= 90;
+        }
 
         if (rotate == true)
 		{
@@ -47,31 +59,16 @@ public class Rotate : MonoBehaviour {
                 transform.rotation = Quaternion.Lerp(sourceOrientation, rotation, speed);
                 target.transform.rotation = Quaternion.Lerp(playerRotation, playerRotation, playerSpeed);
                 sourceOrientation = transform.rotation;
-                player_rb.isKinematic = true;
+                //player_rb.isKinematic = true;
 
             }
 
             else
             {
                 rotate = false;
-                player_rb.isKinematic = false;
+                //player_rb.isKinematic = false;
             }
         }
-        else
-        {
-            if (Input.GetKeyDown("left"))
-            {
-                rotate = true;
-                playerDirection = -1;
-                angle += 90;
-            }
 
-            if (Input.GetKeyDown("right"))
-            {
-                rotate = true;
-                playerDirection = 1;
-                angle -= 90;
-            }
-        }
 	}
 }
