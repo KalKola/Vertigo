@@ -43,14 +43,12 @@ public class Rotate : MonoBehaviour
         if (Input.GetKeyDown("left"))
         {
             rotate = true;
-            playerDirection = -1;
             angle += 90;
         }
 
         if (Input.GetKeyDown("right"))
         {
             rotate = true;
-            playerDirection = 1;
             angle -= 90;
         }
 
@@ -62,14 +60,14 @@ public class Rotate : MonoBehaviour
                 transform.rotation = Quaternion.Lerp(sourceOrientation, rotation, speed);
                 player.transform.rotation = Quaternion.Lerp(playerRotation, playerRotation, playerSpeed);
                 sourceOrientation = transform.rotation;
-                player_rb.isKinematic = true;
+                player_rb.simulated = false;
 
             }
 
             else
             {
                 rotate = false;
-                player_rb.isKinematic = false;
+                player_rb.simulated = true;
             }
         }
 
