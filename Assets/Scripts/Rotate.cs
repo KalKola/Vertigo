@@ -52,6 +52,13 @@ public class Rotate : MonoBehaviour
             angle -= 90;
         }
 
+        if (Input.GetKeyDown("up"))
+        {
+            rotate = true;
+           // playerDirection = 2;
+            angle += 180;
+        }
+
         if (rotate == true)
         {
             rotation = Quaternion.Euler(0, 0, angle);
