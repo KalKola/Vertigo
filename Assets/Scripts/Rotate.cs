@@ -43,15 +43,22 @@ public class Rotate : MonoBehaviour
         if (Input.GetKeyDown("left"))
         {
             rotate = true;
-            playerDirection = -1;
+            //playerDirection = -1;
             angle += 90;
         }
 
         if (Input.GetKeyDown("right"))
         {
             rotate = true;
-            playerDirection = 1;
+            //playerDirection = 1;
             angle -= 90;
+        }
+
+        if (Input.GetKeyDown("up"))
+        {
+            rotate = true;
+           // playerDirection = 2;
+            angle += 180;
         }
 
         if (rotate == true)
