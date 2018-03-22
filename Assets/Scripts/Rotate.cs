@@ -18,7 +18,7 @@ public class Rotate : MonoBehaviour
     public float playerSpeed;
     public float angle;
     public Rigidbody2D player_rb;
-    public Quaternion minusRotation;
+
 
 
 
@@ -28,6 +28,7 @@ public class Rotate : MonoBehaviour
 
         //defining variables
         rotate = false;
+        playerDirection = 0;
         speed = 0.5f;
         angle = 0.0f;
         sourceOrientation = transform.rotation;
@@ -39,38 +40,35 @@ public class Rotate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Rotates in the left direction by 90 degres
         if (Input.GetKeyDown("left"))
         {
             rotate = true;
+            //playerDirection = -1;
             angle += 90;
         }
 
-        //Rotates in the right direction by 90 degres
         if (Input.GetKeyDown("right"))
         {
             rotate = true;
+            //playerDirection = 1;
             angle -= 90;
         }
 
         if (Input.GetKeyDown("up"))
         {
             rotate = true;
+           // playerDirection = 2;
             angle += 180;
         }
 
         if (rotate == true)
         {
             rotation = Quaternion.Euler(0, 0, angle);
-            minusRotation = Quaternion.Euler(0, 0, -(angle));
-            if (sourceOrientation != rotation || sourceOrientation != minusRotation)
+            if (sourceOrientation != rotation)
             {
-                //Rotates
                 transform.rotation = Quaternion.Lerp(sourceOrientation, rotation, speed);
-                //Keeps the rotation of the player to be always straight
                 player.transform.rotation = Quaternion.Lerp(playerRotation, playerRotation, playerSpeed);
                 sourceOrientation = transform.rotation;
-                //Disables rigid body
                 player_rb.simulated = false;
 
             }

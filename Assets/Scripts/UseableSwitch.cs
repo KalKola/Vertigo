@@ -6,7 +6,7 @@ public class UseableSwitch : Switch {
 
     void Use()
     {
-
+        Toggle();
     }
 
 
