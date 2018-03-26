@@ -291,7 +291,7 @@ GameObject:
   - component: {fileID: 1342380735}
   - component: {fileID: 1342380732}
   m_Layer: 0
-  m_Name: LightGrey_Box128x128
+  m_Name: PressuresSwitch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -309,7 +309,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resetType: 1
-  Target: {fileID: 465990585}
+  Targets:
+  - {fileID: 465990585}
   OnMessage: Open
   OffMessage: Close
   isOn: 0
@@ -408,7 +409,7 @@ GameObject:
   - component: {fileID: 1439578831}
   - component: {fileID: 1439578834}
   m_Layer: 0
-  m_Name: DarkGrey_Box128x128
+  m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -527,7 +528,7 @@ GameObject:
   - component: {fileID: 1947366856}
   - component: {fileID: 1947366858}
   m_Layer: 8
-  m_Name: Orange_Box128x128
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

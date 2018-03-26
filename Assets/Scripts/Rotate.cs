@@ -69,14 +69,14 @@ public class Rotate : MonoBehaviour
                 transform.rotation = Quaternion.Lerp(sourceOrientation, rotation, speed);
                 player.transform.rotation = Quaternion.Lerp(playerRotation, playerRotation, playerSpeed);
                 sourceOrientation = transform.rotation;
-                player_rb.simulated = false;
+                player_rb.isKinematic = true;
 
             }
 
             else
             {
                 rotate = false;
-                player_rb.simulated = true;
+                player_rb.isKinematic = false;
             }
         }
 

@@ -13,8 +13,6 @@ public class PlayerController : MonoBehaviour {
     private bool grounded;
     private bool doubleJump;
 
-    List<Collider2D> colliders = new List<Collider2D>();
-
 	// Use this for initialization
 	void Start ()
     {
@@ -51,19 +49,5 @@ public class PlayerController : MonoBehaviour {
             GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
         }
 
-        if (Input.GetButtonDown("Fire1"))
-        {
-            colliders.ForEach(n => n.SendMessage("Use", SendMessageOptions.DontRequireReceiver));
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        colliders.Add(collision);
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        colliders.Remove(collision);
     }
 }
