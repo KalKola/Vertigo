@@ -13,10 +13,13 @@ public class PlayerController : MonoBehaviour {
     private bool grounded;
     private bool doubleJump;
 
+    //Makes a list of triggers
+    List<Collider2D> collidors;
+
 	// Use this for initialization
 	void Start ()
     {
-		
+        collidors = new List<Collider2D>();
 	}
 
     private void FixedUpdate()
@@ -49,5 +52,19 @@ public class PlayerController : MonoBehaviour {
             GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
         }
 
+        if (Input.GetButtonDown("e"))
+        {
+            collidors.ForEach(n =>n.SendMessage("Use", SendMessageOptions.DontRequireReceiver));
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        collidors.Add(collision);
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        collidors.Remove(collision);
     }
 }
