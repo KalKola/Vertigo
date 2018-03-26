@@ -5,13 +5,13 @@ using UnityEngine;
 public class Door : MonoBehaviour {
 
     public bool isOpen;
-    Collider2D myCollidor;
-    Animator myAnimator;    
+    Collider2D selfCollidor;
+    //Animator myAnimator;    
 
 	// Use this for initialization
 	void Start () {
-        myCollidor = GetComponent<Collider2D>();
-        myAnimator = GetComponent<Animator>();
+        selfCollidor = GetComponent<Collider2D>();
+        //myAnimator = GetComponent<Animator>();
 	}
 	
     public void Open()
@@ -46,7 +46,7 @@ public class Door : MonoBehaviour {
     void SetState(bool open)
     {
         isOpen = open;
-        myAnimator.SetBool("Open", open);
-        myCollidor.isTrigger = open;
+        //myAnimator.SetBool("Open", open);
+        selfCollidor.isTrigger = open;
     }
 }

@@ -4,17 +4,20 @@ using UnityEngine;
 
 public class Switch : MonoBehaviour
 {
-
-    public GameObject Target;
+    public enum ResetType { Never, OnUse, Timed, Immediately }
+    public ResetType resetType = ResetType.OnUse;
+    public List<GameObject> Targets = new List<GameObject>();
     public string OnMessage;
     public string OffMessage;
     public bool isOn;
-    Animator myAnimator;
+
+    public float ResetTime;
+   // Animator myAnimator;
 
     // Use this for initialization
     void Start()
     {
-        myAnimator = GetComponent<Animator>();
+        //myAnimator = GetComponent<Animator>();
     }
 
     public void TurnOn()
@@ -27,7 +30,7 @@ public class Switch : MonoBehaviour
 
     public void TurnOff()
     {
-        if (isOn)
+        if (isOn && resetType != ResetType.Never && resetType != ResetType.Timed)
         {
             SetState(false);
         }
@@ -44,23 +47,36 @@ public class Switch : MonoBehaviour
             TurnOn();
         }
     }
+
+    public void TimedReset()
+    {
+        SetState(false);
+    }
+
+
     // Update is called once per frame
     void SetState(bool on)
     {
         isOn = on;
-        myAnimator.SetBool("On", on);
+        //myAnimator.SetBool("On", on);
         if (on)
         {
-            if (Target != null && !string.IsNullOrEmpty(OnMessage))
+            if (Targets.Count > 0 && !string.IsNullOrEmpty(OnMessage))
             {
-                Target.SendMessage(OnMessage);
+                Targets.ForEach(n => n.SendMessage(OnMessage));
             }
+            if (resetType == ResetType.Immediately)
+            {
+                TurnOff();
+            }
+            else if (resetType == ResetType.Timed)
+                Invoke("TimedReset", ResetTime);
         }
         else
         {
-            if (Target != null && !string.IsNullOrEmpty(OffMessage))
+            if (Targets.Count > 0 && !string.IsNullOrEmpty(OffMessage))
             {
-                Target.SendMessage(OffMessage);
+                Targets.ForEach(n => n.SendMessage(OffMessage));
             }
         }
     }
