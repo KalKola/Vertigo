@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: c0ff98c55b9814d4bab08cf25173595f
-timeCreated: 1521992686
+guid: 4c52c263a8fd4d846b2b1ef48ea93ef3
+timeCreated: 1522060324
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Platform01
-    21300002: Platform02
-    21300004: Main01
-    21300006: Main02
+    21300000: Platform
+    21300002: Flames02
+    21300004: Flames01
+    21300006: Flames03
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -35,7 +35,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -50,7 +50,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -94,55 +94,55 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Platform01
+      name: Platform
       rect:
         serializedVersion: 2
-        x: 32
-        y: 808
-        width: 288
-        height: 128
+        x: 96
+        y: 378
+        width: 64
+        height: 38
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Platform02
+      name: Flames02
       rect:
         serializedVersion: 2
-        x: 32
-        y: 648
-        width: 288
-        height: 128
+        x: 194
+        y: 406
+        width: 51
+        height: 12
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Main01
+      name: Flames01
       rect:
         serializedVersion: 2
-        x: 352
-        y: 648
-        width: 192
-        height: 352
+        x: 194
+        y: 371
+        width: 50
+        height: 12
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Main02
+      name: Flames03
       rect:
         serializedVersion: 2
-        x: 608
-        y: 648
-        width: 384
-        height: 320
+        x: 194
+        y: 387
+        width: 51
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
