@@ -8,6 +8,7 @@ TextureImporter:
     21300002: Flames02
     21300004: Flames01
     21300006: Flames03
+    21300008: Flames04
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -35,7 +36,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -50,7 +51,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -102,7 +103,7 @@ TextureImporter:
         width: 64
         height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -111,12 +112,12 @@ TextureImporter:
       name: Flames02
       rect:
         serializedVersion: 2
-        x: 194
-        y: 406
-        width: 51
-        height: 12
+        x: 256
+        y: 403
+        width: 50
+        height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -125,12 +126,12 @@ TextureImporter:
       name: Flames01
       rect:
         serializedVersion: 2
-        x: 194
+        x: 256
         y: 371
         width: 50
-        height: 12
+        height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -139,10 +140,24 @@ TextureImporter:
       name: Flames03
       rect:
         serializedVersion: 2
-        x: 194
+        x: 256
         y: 387
-        width: 51
-        height: 12
+        width: 50
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Flames04
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 354
+        width: 50
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
