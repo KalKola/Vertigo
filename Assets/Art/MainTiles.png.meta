@@ -9,6 +9,7 @@ TextureImporter:
     21300004: Main01
     21300006: Main02
     21300008: Main03
+    21300010: Bottom01
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -158,6 +159,20 @@ TextureImporter:
         y: 520
         width: 128
         height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bottom01
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 286
+        width: 611
+        height: 163
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
