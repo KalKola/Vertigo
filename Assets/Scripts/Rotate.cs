@@ -6,7 +6,7 @@ public class Rotate : MonoBehaviour
 {
 
     //initializing variables
-    public PlayerController player;
+    public PlayerAnimController player;
     public Quaternion playerOrientation;
     public Quaternion sourceOrientation;
     public Quaternion rotation;
@@ -32,7 +32,7 @@ public class Rotate : MonoBehaviour
         speed = 0.5f;
         angle = 0.0f;
         sourceOrientation = transform.rotation;
-        player = FindObjectOfType<PlayerController>();
+        player = FindObjectOfType<PlayerAnimController>();
         playerRotation = player.transform.rotation;
         player_rb = player.GetComponent<Rigidbody2D>();
     }

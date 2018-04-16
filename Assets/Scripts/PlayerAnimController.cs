@@ -40,7 +40,7 @@ public class PlayerAnimController : MonoBehaviour
     
     void Update()
     {
-        movePlayer(speed);
+        MovePlayer(speed);
 
         Flip();
         if (Input.GetKeyDown(KeyCode.A))
@@ -80,10 +80,12 @@ public class PlayerAnimController : MonoBehaviour
         }*/
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(GetComponent<Rigidbody2D>().velocity.x,jumpHeight));
+            //GetComponent<Rigidbody2D>().AddForce(new Vector2(GetComponent<Rigidbody2D>().velocity.x,jumpHeight));
             // grounded = false;
+            GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpHeight);
             isJumping = true;
             anim.SetInteger("State", 1);
+
         }
         
         /*
@@ -115,7 +117,7 @@ public class PlayerAnimController : MonoBehaviour
         }
     */
     }
-    void movePlayer(float playerSpeed)
+    void MovePlayer(float playerSpeed)
     {
         if ((playerSpeed < 0 && (!isJumping) && (isGrabbing)) || (playerSpeed > 0 && (!isJumping) && (isGrabbing)))
         {
@@ -141,10 +143,19 @@ public class PlayerAnimController : MonoBehaviour
         if(((speed < 0) && (faceRight)) || ((speed > 0) && (!faceRight)))
         {
             faceRight = !faceRight;
-            Vector3 temp = transform.localScale;
-            temp.x *= -1;
-            transform.localScale = temp;
+            //Vector3 temp = transform.localScale;
+            //temp.x *= -1;
+            //transform.localScale = temp;
+            if (faceRight)
+            {
+                GetComponent<SpriteRenderer>().flipX = false;
+            }
+            else
+            {
+                GetComponent<SpriteRenderer>().flipX = true;
+            }
         }
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

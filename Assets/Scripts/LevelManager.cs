@@ -6,11 +6,11 @@ public class LevelManager : MonoBehaviour {
 
     public GameObject currentSpawn;
 
-    private PlayerController player;
+    private PlayerAnimController player;
 
 	// Use this for initialization
 	void Start () {
-        player = FindObjectOfType<PlayerController>();
+        player = FindObjectOfType<PlayerAnimController>();
 	}
 	
 	// Update is called once per frame
