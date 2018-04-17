@@ -10,6 +10,9 @@ TextureImporter:
     21300006: Main02
     21300008: Main03
     21300010: Bottom01
+    21300012: RightCorner
+    21300014: RightEdge
+    21300016: SparePiece
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -173,6 +176,48 @@ TextureImporter:
         y: 286
         width: 611
         height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RightCorner
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 7
+        width: 195
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RightEdge
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 159
+        width: 55
+        height: 391
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SparePiece
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 42
+        width: 157
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

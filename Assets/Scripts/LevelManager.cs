@@ -5,8 +5,9 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour {
 
     public GameObject currentSpawn;
-
+    public GameObject centreRotation;
     private PlayerAnimController player;
+    public GameObject Spawn;
 
 	// Use this for initialization
 	void Start () {
@@ -21,6 +22,9 @@ public class LevelManager : MonoBehaviour {
     public void SpawnPlayer()
     {
         Debug.Log("Player Respawn");
-        player.transform.position = currentSpawn.transform.position;
+        centreRotation.transform.rotation = new Quaternion(0, 0, 0, 0);
+        player.transform.rotation = new Quaternion(0, 0, 0, 0);
+        player.transform.position = Spawn.transform.position;
+
     }
 }

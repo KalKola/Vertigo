@@ -5,6 +5,9 @@ using UnityEngine;
 public class Spawn : MonoBehaviour {
 
     public LevelManager levelManager;
+    public GameObject Player;
+    public GameObject centreRotation;
+
 
     // Use this for initialization
     void Start()
@@ -17,6 +20,7 @@ public class Spawn : MonoBehaviour {
         if (other.name == "Boi")
         {
             levelManager.currentSpawn = gameObject;
+            centreRotation.transform.rotation = new Quaternion(0, 0, 0, 0);
         }
     }
 }
