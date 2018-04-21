@@ -117,7 +117,7 @@ public class PlayerAnimController : MonoBehaviour
         }
     */
     }
-    void MovePlayer(float playerSpeed)
+    public void MovePlayer(float playerSpeed)
     {
         if ((playerSpeed < 0 && (!isJumping) && (isGrabbing)) || (playerSpeed > 0 && (!isJumping) && (isGrabbing)))
         {
