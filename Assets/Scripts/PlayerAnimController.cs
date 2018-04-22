@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAnimController : MonoBehaviour
 {
-
+    public AudioSource jumpsfx,walksfx,grabsfx,putsfx;
     public float moveSpeed;
     public float jumpHeight;
 
@@ -46,18 +46,24 @@ public class PlayerAnimController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A))
         {
             speed = -moveSpeed;
+            walksfx.Play();
         }
         if (Input.GetKeyUp(KeyCode.A))
         {
             speed = 0;
+            walksfx.Stop();
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
             speed = moveSpeed;
+            walksfx.Play();
+         
         }
         if (Input.GetKeyUp(KeyCode.D))
         {
             speed = 0;
+            walksfx.Stop();
+      
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -67,6 +73,7 @@ public class PlayerAnimController : MonoBehaviour
         if (isGrabbing)
         {
             anim.SetInteger("State", 4);
+            grabsfx.Play();
         }
 
         /*
@@ -85,9 +92,11 @@ public class PlayerAnimController : MonoBehaviour
             GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpHeight);
             isJumping = true;
             anim.SetInteger("State", 1);
+            jumpsfx.Play();
+
 
         }
-        
+   
         /*
         if (grounded)
         {
@@ -164,6 +173,7 @@ public class PlayerAnimController : MonoBehaviour
         {
             isJumping = false;
             anim.SetInteger("State", 3);
+         
         }
     }
     /*  private void OnTriggerEnter2D(Collider2D collision)

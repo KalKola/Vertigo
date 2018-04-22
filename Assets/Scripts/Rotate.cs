@@ -6,6 +6,7 @@ public class Rotate : MonoBehaviour
 {
 
     //initializing variables
+    public AudioSource rotatesfx;
     public PlayerAnimController player;
     public Quaternion playerOrientation;
     public Quaternion sourceOrientation;
@@ -62,6 +63,7 @@ public class Rotate : MonoBehaviour
 
         if (rotate == true)
         {
+            rotatesfx.Play();
             rotation = Quaternion.Euler(0, 0, angle);
             if (sourceOrientation != rotation)
             {
