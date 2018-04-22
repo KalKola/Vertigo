@@ -1,19 +1,18 @@
 fileFormatVersion: 2
-guid: a432b248be3319b4a9730dc0c58d7803
-timeCreated: 1521552263
+guid: 25aacf992bffeed48bd4e4ad2877655e
+timeCreated: 1521992686
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: door_open
-    21300002: d_t_d__sprites_by_braveshyguy_1
-    21300004: d_t_d__sprites_by_braveshyguy_2
-    21300006: d_t_d__sprites_by_braveshyguy_3
-    21300008: d_t_d__sprites_by_braveshyguy_4
-    21300010: door_close
-    21300012: door_open3
-    21300014: d_t_d__sprites_by_braveshyguy_7
-    21300016: door_open2
-    21300018: door_open1
+    21300000: Platform01
+    21300002: Platform02
+    21300004: Main01
+    21300006: Main02
+    21300008: Main03
+    21300010: Bottom01
+    21300012: RightCorner
+    21300014: RightEdge
+    21300016: SparePiece
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -41,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -55,8 +54,8 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 121, z: 253, w: 3}
-  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 16
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -86,17 +85,125 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: door_open
+      name: Platform01
       rect:
         serializedVersion: 2
-        x: 3
-        y: 122
-        width: 64
-        height: 116
+        x: 32
+        y: 808
+        width: 288
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Platform02
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 648
+        width: 288
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Main01
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 648
+        width: 192
+        height: 352
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Main02
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 648
+        width: 384
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Main03
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 520
+        width: 128
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bottom01
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 286
+        width: 611
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RightCorner
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 7
+        width: 195
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RightEdge
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 159
+        width: 55
+        height: 391
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -104,140 +211,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: d_t_d__sprites_by_braveshyguy_1
+      name: SparePiece
       rect:
         serializedVersion: 2
-        x: 67
-        y: 131
-        width: 64
-        height: 111
+        x: 6
+        y: 42
+        width: 157
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
-    - serializedVersion: 2
-      name: d_t_d__sprites_by_braveshyguy_2
-      rect:
-        serializedVersion: 2
-        x: 131
-        y: 131
-        width: 64
-        height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: d_t_d__sprites_by_braveshyguy_3
-      rect:
-        serializedVersion: 2
-        x: 195
-        y: 131
-        width: 64
-        height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: d_t_d__sprites_by_braveshyguy_4
-      rect:
-        serializedVersion: 2
-        x: 259
-        y: 131
-        width: 64
-        height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: door_close
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 1
-        width: 64
-        height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: door_open3
-      rect:
-        serializedVersion: 2
-        x: 82
-        y: 1
-        width: 69
-        height: 117
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: d_t_d__sprites_by_braveshyguy_7
-      rect:
-        serializedVersion: 2
-        x: 132
-        y: 20
-        width: 64
-        height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: door_open2
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 1
-        width: 66
-        height: 114
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: door_open1
-      rect:
-        serializedVersion: 2
-        x: 235
-        y: 1
-        width: 85
-        height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    outline:
-    - - {x: -162, y: 121}
-      - {x: -162, y: -121}
-      - {x: 162, y: -121}
-      - {x: 162, y: 121}
-    - - {x: -158.68233, y: -0.3787079}
-      - {x: -92.02817, y: 0.37873077}
-      - {x: -94.30047, y: 116.26605}
-      - {x: -155.65259, y: 114.75119}
+    outline: []
     physicsShape: []
   spritePackingTag: 
   userData: 
