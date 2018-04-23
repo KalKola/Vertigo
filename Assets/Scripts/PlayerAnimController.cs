@@ -7,25 +7,21 @@ public class PlayerAnimController : MonoBehaviour
     public AudioSource jumpsfx,walksfx,grabsfx,putsfx;
     public float moveSpeed;
     public float jumpHeight;
-
+    public bool grounded;
     public Transform groundCheck;
     public float groundCheckRadius;
     public LayerMask whatIsGround;
-   // private bool grounded;
     private bool doubleJump;
     private bool faceRight, isJumping;
     //to grab
     private bool isGrabbing;
     float speed;
-    //Makes a list of triggers
-   // List<Collider2D> collidors;
 
     Animator anim;
     Rigidbody2D rb;
     // Use this for initialization
     void Start()
     {
-        //collidors = new List<Collider2D>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         faceRight = true;
@@ -33,11 +29,10 @@ public class PlayerAnimController : MonoBehaviour
 
     private void FixedUpdate()
     {
-     //   grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
+        grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
     }
 
-    // Update is called once per frame
-    
+    // Update is called once per frame 
     void Update()
     {
         MovePlayer(speed);
@@ -76,55 +71,17 @@ public class PlayerAnimController : MonoBehaviour
             grabsfx.Play();
         }
 
-        /*
-        if (Input.GetKeyUp(KeyCode.E))
-        {
-            isGrabbing = !isGrabbing;
-            if (isGrabbing)
-            {
-                anim.SetInteger("State", 4);
-            }
-        }*/
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            //GetComponent<Rigidbody2D>().AddForce(new Vector2(GetComponent<Rigidbody2D>().velocity.x,jumpHeight));
-            // grounded = false;
-            GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpHeight);
-            isJumping = true;
-            anim.SetInteger("State", 1);
-            jumpsfx.Play();
-
-
-        }
-   
-        /*
-        if (grounded)
-        {
-            doubleJump = false;
-        }
         if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpHeight);
-        }
-        if (Input.GetKeyDown(KeyCode.Space) && !doubleJump && !grounded)
-        {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpHeight);
-            doubleJump = true;
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            anim.SetInteger("State", 1);
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+            
+                GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpHeight);
+                isJumping = true;
+                anim.SetInteger("State", 1);
+                jumpsfx.Play();
+
         }
 
-        if (Input.GetButtonDown("e"))
-        {
-            collidors.ForEach(n => n.SendMessage("Use", SendMessageOptions.DontRequireReceiver));
-        }
-    */
+
     }
     public void MovePlayer(float playerSpeed)
     {
@@ -176,16 +133,6 @@ public class PlayerAnimController : MonoBehaviour
          
         }
     }
-    /*  private void OnTriggerEnter2D(Collider2D collision)
-      {
-          collidors.Add(collision);
-      }
-
-      private void OnTriggerExit2D(Collider2D collision)
-      {
-          collidors.Remove(collision);
-      }
-      */
    
       
 }
