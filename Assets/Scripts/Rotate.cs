@@ -13,7 +13,6 @@ public class Rotate : MonoBehaviour
     public Quaternion rotation;
     public Quaternion playerRotation;
     public bool leftright;
-    public int playerDirection;
     public bool rotate;
     public float speed;
     public float playerSpeed;
@@ -28,7 +27,6 @@ public class Rotate : MonoBehaviour
 
         //defining variables
         rotate = false;
-        playerDirection = 0;
         speed = 0.5f;
         angle = 0.0f;
         sourceOrientation = transform.rotation;
@@ -43,21 +41,18 @@ public class Rotate : MonoBehaviour
         if (Input.GetKeyDown("left"))
         {
             rotate = true;
-            //playerDirection = -1;
             angle += 90;
         }
 
         if (Input.GetKeyDown("right"))
         {
             rotate = true;
-            //playerDirection = 1;
             angle -= 90;
         }
 
         if (Input.GetKeyDown("up"))
         {
             rotate = true;
-           // playerDirection = 2;
             angle += 180;
         }
 

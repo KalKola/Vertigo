@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour {
             GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
         }
 
-        if (Input.GetButtonDown("e"))
+        if (Input.GetButtonDown("E"))
         {
             collidors.ForEach(n =>n.SendMessage("Use", SendMessageOptions.DontRequireReceiver));
         }
