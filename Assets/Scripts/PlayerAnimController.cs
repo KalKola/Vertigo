@@ -15,7 +15,7 @@ public class PlayerAnimController : MonoBehaviour
     private bool faceRight, isJumping;
     //to grab
     private bool isGrabbing;
-    float speed;
+    public float speed;
 
     Animator anim;
     Rigidbody2D rb;
