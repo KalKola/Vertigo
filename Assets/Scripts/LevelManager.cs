@@ -5,12 +5,13 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour {
 
     public GameObject currentSpawn;
-
-    private PlayerController player;
+    public GameObject centreRotation;
+    private PlayerAnimController player;
+    public GameObject Spawn;
 
 	// Use this for initialization
 	void Start () {
-        player = FindObjectOfType<PlayerController>();
+        player = FindObjectOfType<PlayerAnimController>();
 	}
 	
 	// Update is called once per frame
@@ -21,6 +22,9 @@ public class LevelManager : MonoBehaviour {
     public void SpawnPlayer()
     {
         Debug.Log("Player Respawn");
-        player.transform.position = currentSpawn.transform.position;
+        centreRotation.transform.rotation = new Quaternion(0, 0, 0, 0);
+        player.transform.rotation = new Quaternion(0, 0, 0, 0);
+        player.transform.position = Spawn.transform.position;
+
     }
 }
