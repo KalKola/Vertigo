@@ -15,7 +15,8 @@ public class PlayerAnimController : MonoBehaviour
     private bool faceRight, isJumping;
     //to grab
     private bool isGrabbing;
-    public float speed;
+    float speed;
+    List<Collider2D> collidors;
 
     Animator anim;
     Rigidbody2D rb;
@@ -25,6 +26,7 @@ public class PlayerAnimController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         faceRight = true;
+        collidors = new List<Collider2D>();
     }
 
     private void FixedUpdate()
@@ -63,6 +65,7 @@ public class PlayerAnimController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             isGrabbing = !isGrabbing;
+            collidors.ForEach(n => n.SendMessage("Use", SendMessageOptions.DontRequireReceiver));
         }
 
         if (isGrabbing)
@@ -133,6 +136,14 @@ public class PlayerAnimController : MonoBehaviour
          
         }
     }
-   
-      
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        collidors.Add(collision);
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        collidors.Remove(collision);
+    }
+
 }
