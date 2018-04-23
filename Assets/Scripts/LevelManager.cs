@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour {
 
-    public GameObject currentSpawn;
     public GameObject centreRotation;
     private PlayerAnimController player;
     public GameObject Spawn;
+    private Rotate resetAngle;
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +24,7 @@ public class LevelManager : MonoBehaviour {
         Debug.Log("Player Respawn");
         centreRotation.transform.rotation = new Quaternion(0, 0, 0, 0);
         player.transform.rotation = new Quaternion(0, 0, 0, 0);
+        centreRotation.GetComponent<Rotate>().angle = 0.0f;
         player.transform.position = Spawn.transform.position;
 
     }

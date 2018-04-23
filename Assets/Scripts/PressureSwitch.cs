@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PressureSwitch : Switch {
 
-    
+    //Can be used to determine how many pressure switches are needed to do something
     int numColliding = 0;
 
     private void OnTriggerEnter2D(Collider2D collision)

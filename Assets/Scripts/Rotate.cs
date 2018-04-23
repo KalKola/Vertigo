@@ -50,12 +50,6 @@ public class Rotate : MonoBehaviour
             angle -= 90;
         }
 
-        if (Input.GetKeyDown("up"))
-        {
-            rotate = true;
-            angle += 180;
-        }
-
         if (rotate == true)
         {
             rotatesfx.Play();
