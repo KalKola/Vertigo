@@ -3,13 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-<<<<<<< HEAD
   tags:
-  - Platforms
   - grabable
-=======
-  tags: []
->>>>>>> b56916a85d6f5127c395d467b04e93bcecc9c219
+  - Platforms
   layers:
   - Default
   - TransparentFX
@@ -19,13 +15,8 @@ TagManager:
   - UI
   - 
   - 
-<<<<<<< HEAD
-  - Ground
   - Block
-=======
   - 
-  - 
->>>>>>> b56916a85d6f5127c395d467b04e93bcecc9c219
   - 
   - 
   - 

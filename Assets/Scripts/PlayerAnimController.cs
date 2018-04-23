@@ -62,17 +62,14 @@ public class PlayerAnimController : MonoBehaviour
             walksfx.Stop();
       
         }
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            isGrabbing = !isGrabbing;
-            collidors.ForEach(n => n.SendMessage("Use", SendMessageOptions.DontRequireReceiver));
-        }
-
-        if (isGrabbing)
+        if (Input.GetKey(KeyCode.E))
         {
             anim.SetInteger("State", 4);
             grabsfx.Play();
+            collidors.ForEach(n => n.SendMessage("Use", SendMessageOptions.DontRequireReceiver));
         }
+
+
 
         if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {

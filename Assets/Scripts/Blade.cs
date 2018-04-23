@@ -14,7 +14,7 @@ public class Blade : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        this.transform.Rotate(new Vector3(0, 0, rotationSpeed));
+        transform.Rotate(new Vector3(0, 0, rotationSpeed));
 	}
 
     void OnTriggerEnter2D(Collider2D other)
