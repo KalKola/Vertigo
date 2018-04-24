@@ -22,7 +22,7 @@ public class StopMove : MonoBehaviour {
         }
         if (spawner)        
         {
-            player.speed = 5;
+            player.speed = 3;
             player.Caller();
         }
     }

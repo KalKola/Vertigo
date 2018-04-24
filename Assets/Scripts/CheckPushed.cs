@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 /*
  * 
- * Was used to make the block unmoveable unless grabbed, but it messed with the rotation as the block would move back to 
+ * 
+ * 
+ * Was used to make the block unmoveable unless grabbed, but the method messed with the rotation as the block would move back to 
  * original position when you rotate the block with the room.
  * 
  * 

@@ -5,12 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class SwitchScene : MonoBehaviour {
 
+    public string scene;
+    public bool clicked;
+
+    private void Start()
+    {
+        clicked = false;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("justineRoom");
+            SceneManager.LoadScene(scene);
         }
     }
+
+
 
 }
