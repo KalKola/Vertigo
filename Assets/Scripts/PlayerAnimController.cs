@@ -64,8 +64,6 @@ public class PlayerAnimController : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.E))
         {
-            anim.SetInteger("State", 4);
-            grabsfx.Play();
             collidors.ForEach(n => n.SendMessage("Use", SendMessageOptions.DontRequireReceiver));
         }
 

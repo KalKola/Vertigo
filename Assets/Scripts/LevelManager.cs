@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 
@@ -27,5 +28,10 @@ public class LevelManager : MonoBehaviour {
         centreRotation.GetComponent<Rotate>().angle = 0.0f;
         player.transform.position = Spawn.transform.position;
 
+    }
+
+    public void SwitchScenes()
+    {
+        SceneManager.LoadScene("justineRoom");
     }
 }

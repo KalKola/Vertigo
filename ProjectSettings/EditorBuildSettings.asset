@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Rooms/firstRoom.unity
+    guid: 590fa97ef2f79994d83b54e0726f28fb
+  - enabled: 1
+    path: Assets/Rooms/justineRoom.unity
+    guid: 0096d2814dbcc284bbb66a44be8fefab

@@ -17,7 +17,9 @@ public class RidgidBodyConstraints : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        /*
+         * Was used alongside CheckPushed so the block won't move at all when collided at a weird angle
+         * 
         beingPushed = GetComponent<CheckPushed>().beingPushed;
         if (beingPushed == true)
         {
@@ -27,5 +29,6 @@ public class RidgidBodyConstraints : MonoBehaviour {
         {
             myRigidbody.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
         }
+        */
 	}
 }
