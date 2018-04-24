@@ -1,9 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
+ * 
+ * Was used to make the block unmoveable unless grabbed, but it messed with the rotation as the block would move back to 
+ * original position when you rotate the block with the room.
+ * 
+ * 
 public class CheckPushed : MonoBehaviour {
-    
+
+    public GameObject room;
     public bool beingPushed;
     float xPos;
 
@@ -14,7 +20,7 @@ public class CheckPushed : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (beingPushed == false)
+        if (beingPushed == false|| room.GetComponent<Rotate>().rotate == true)
         {
             transform.position = new Vector3(xPos, transform.position.y);
         }
@@ -22,5 +28,7 @@ public class CheckPushed : MonoBehaviour {
         {
             xPos = transform.position.x;
         }
+
 	}
 }
+*/

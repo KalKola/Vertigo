@@ -10,6 +10,10 @@ public class PressureSwitch : Switch {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         numColliding++;
+        if(collision.gameObject.tag == "grabable")
+        {
+            collision.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
+        }
         TurnOn();
     }
 
@@ -18,6 +22,7 @@ public class PressureSwitch : Switch {
         numColliding--;
         if(numColliding == 0)
         {
+            collision.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
             TurnOff();
         }
     }

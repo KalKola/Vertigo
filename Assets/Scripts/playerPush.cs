@@ -28,7 +28,11 @@ public class playerPush : MonoBehaviour {
             //Gets the object and enables the components 
             object_backward = hit_backward.collider.gameObject;
             object_backward.GetComponent<FixedJoint2D>().enabled = true;
+            /*
+             *See CheckPushed script for why its commented out.
+             * 
             object_backward.GetComponent<CheckPushed>().beingPushed = true;
+            */
             object_backward.GetComponent<FixedJoint2D>().connectedBody = GetComponent<Rigidbody2D>();
             
         }//Disables component 
@@ -36,7 +40,7 @@ public class playerPush : MonoBehaviour {
         {
             
             object_backward.GetComponent<FixedJoint2D>().enabled = false;
-            object_backward.GetComponent<CheckPushed>().beingPushed = false;
+            //object_backward.GetComponent<CheckPushed>().beingPushed = false;
         }
 
 
@@ -45,14 +49,14 @@ public class playerPush : MonoBehaviour {
         {
             object_forward = hit_forward.collider.gameObject;
             object_forward.GetComponent<FixedJoint2D>().enabled = true;
-            object_forward.GetComponent<CheckPushed>().beingPushed = true;
+          //  object_forward.GetComponent<CheckPushed>().beingPushed = true;
             object_forward.GetComponent<FixedJoint2D>().connectedBody = GetComponent<Rigidbody2D>();
 
         }
         else if(Input.GetKeyUp(KeyCode.E) && hit_forward.collider != null)
         {
             object_forward.GetComponent<FixedJoint2D>().enabled = false;
-            object_forward.GetComponent<CheckPushed>().beingPushed = false;
+           // object_forward.GetComponent<CheckPushed>().beingPushed = false;
         }
 
 
