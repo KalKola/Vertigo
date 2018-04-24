@@ -127,15 +127,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4810810720854756, guid: c040d4bd0cd78f64e98d4c58ae3cb357, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -32.4
+      value: -35.4
       objectReference: {fileID: 0}
     - target: {fileID: 4810810720854756, guid: c040d4bd0cd78f64e98d4c58ae3cb357, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -6.06
+      value: -6.6
       objectReference: {fileID: 0}
     - target: {fileID: 4810810720854756, guid: c040d4bd0cd78f64e98d4c58ae3cb357, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -0.35
+      value: -1.24
       objectReference: {fileID: 0}
     - target: {fileID: 4810810720854756, guid: c040d4bd0cd78f64e98d4c58ae3cb357, type: 2}
       propertyPath: m_LocalRotation.x
@@ -197,7 +197,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4948565088885040, guid: cd6f3a0c5124a2349af6017c1c51c1e0, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0.16191642
+      value: -0.44
       objectReference: {fileID: 0}
     - target: {fileID: 4948565088885040, guid: cd6f3a0c5124a2349af6017c1c51c1e0, type: 2}
       propertyPath: m_LocalRotation.x
@@ -846,8 +846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c749463950d915d4fbb968a28bbd12bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: 
-  clicked: 0
+  scene: justineRoom
 --- !u!4 &518197291 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4487676955195890, guid: 2ba8413d2cf3fb244a0e46e5663890e7,
@@ -1539,7 +1538,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4487676955195890, guid: 2ba8413d2cf3fb244a0e46e5663890e7, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -0.17904177
+      value: -1.59
       objectReference: {fileID: 0}
     - target: {fileID: 4487676955195890, guid: 2ba8413d2cf3fb244a0e46e5663890e7, type: 2}
       propertyPath: m_LocalRotation.x
