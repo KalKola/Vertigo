@@ -28,6 +28,7 @@ public class Teleport : MonoBehaviour {
             box = collision.gameObject;
             box.transform.position = new Vector2(destination.transform.position.x, destination.transform.position.y);
             destination.gameObject.GetComponent<Teleport>().occupied = true;
+            box.GetComponent<FixedJoint2D>().enabled = false;
         }
 
         if (collision.gameObject.tag == "Player" && occupied != true)
