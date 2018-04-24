@@ -6,7 +6,7 @@ using UnityEngine;
 public class SwitchMusicTrigger : MonoBehaviour {
 
     public AudioClip newTrack;
-
+    public PlayerAnimController player;
     private AudioManager theAM;
 
 
@@ -28,6 +28,8 @@ public class SwitchMusicTrigger : MonoBehaviour {
         {
             if(newTrack != null)
                  theAM.ChangeBGM(newTrack);
+           // player.speed = 0;
+
         }
     }
 }
