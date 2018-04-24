@@ -846,7 +846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c749463950d915d4fbb968a28bbd12bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: 
+  scene: justineRoom
   clicked: 0
 --- !u!4 &518197291 stripped
 Transform:
