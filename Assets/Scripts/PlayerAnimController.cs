@@ -15,7 +15,7 @@ public class PlayerAnimController : MonoBehaviour
     private bool faceRight, isJumping;
     //to grab
     private bool isGrabbing;
-    float speed;
+    public float speed;
     List<Collider2D> collidors;
 
     Animator anim;
@@ -33,9 +33,12 @@ public class PlayerAnimController : MonoBehaviour
     {
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
     }
-
+    public void Caller()
+    {
+        MovePlayer(speed);
+    }
     // Update is called once per frame 
-    void Update()
+     void Update()
     {
         MovePlayer(speed);
 

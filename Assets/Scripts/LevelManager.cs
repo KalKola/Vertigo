@@ -6,13 +6,15 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour {
 
     public GameObject centreRotation;
-    private PlayerAnimController player;
+    public PlayerAnimController player;
     public GameObject Spawn;
     private Rotate resetAngle;
+    Vector3 tempPos;
 
 	// Use this for initialization
 	void Start () {
         player = FindObjectOfType<PlayerAnimController>();
+        
 	}
 	
 	// Update is called once per frame
@@ -27,6 +29,10 @@ public class LevelManager : MonoBehaviour {
         player.transform.rotation = new Quaternion(0, 0, 0, 0);
         centreRotation.GetComponent<Rotate>().angle = 0.0f;
         player.transform.position = Spawn.transform.position;
+        //tempPos = player.transform.position;
+            // tempPos.x += 1;
+            //player.transform.position = tempPos;
+        
 
     }
 
@@ -34,4 +40,6 @@ public class LevelManager : MonoBehaviour {
     {
         SceneManager.LoadScene("justineRoom");
     }
+
+    
 }
