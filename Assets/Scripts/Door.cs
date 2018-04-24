@@ -6,7 +6,9 @@ public class Door : MonoBehaviour {
 
     public bool isOpen;
     Collider2D selfCollidor;
-    //Animator myAnimator;    
+    public int requiredSwitch;
+    //Animator myAnimator; 
+    private int switch_amount;
 
 	// Use this for initialization
 	void Start () {
@@ -16,7 +18,8 @@ public class Door : MonoBehaviour {
 	
     public void Open()
     {
-        if (!isOpen)
+        switch_amount++;
+        if (!isOpen && switch_amount == requiredSwitch)
         {
             SetState(true);
         }
@@ -24,6 +27,7 @@ public class Door : MonoBehaviour {
 
     public void Close()
     {
+        switch_amount--;
         if (isOpen)
         {
             SetState(false);
