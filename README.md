@@ -17,3 +17,10 @@ The main features we wished to include were:
         * Custom background music
         
 
+
+**Controls:**
+a            -     move left
+d            -     move right
+space        -     jump
+arrow keys   -     rotate map
+e            -     grab
