@@ -1069,6 +1069,7 @@ GameObject:
   - component: {fileID: 896196556}
   - component: {fileID: 896196555}
   - component: {fileID: 896196557}
+  - component: {fileID: 896196558}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
