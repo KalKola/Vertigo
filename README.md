@@ -23,6 +23,14 @@ The main features we wished to include were:
 Video Demo:
 [![Youtube Link](Assets/Images/Youtube.png)](https://www.youtube.com/watch?v=SxSqIiSyo80)
 
+Roles:
+
+Kalyan Kola Cahill: Art Assets, Parallax Scripting, Music, and Object Animation
+
+Hadi Nisamudeen: Character Animation, Sound Effects, and Coin Collection
+
+Justine Quiapos: Scripting, Rotation Mechanic, and Room 2 Puzzles
+
 
 
 
